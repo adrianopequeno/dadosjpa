@@ -1,0 +1,11 @@
+comando docker para subir uma imagem PostgreSql:
+docker run --name nome_do_container -p postaPC:postaContainerPadrãoDoPostgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=nome_do_banco versão do postgres
+docker run --name libradydb -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library postgres:16.8
+
+-p = Posta
+-e = Variáveis de ambiente
+
+A posta do pc pode ser quanquer porta. Ex: -p 3333:5432
+
+INSTALANDO O IMG DO PGADMIN4 NO DOCKER
+docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=ADMIN dpage/pgadmin4:9
