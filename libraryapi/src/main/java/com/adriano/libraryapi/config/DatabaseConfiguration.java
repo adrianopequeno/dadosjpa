@@ -21,7 +21,7 @@ import javax.sql.DataSource;
         @Value("${spring.datasource.driver-class-name}")
         String driverClassName;
 
-        //@Bean
+//        @Bean
         public DataSource dataSource() {
             DriverManagerDataSource ds = new DriverManagerDataSource();
             ds.setUrl(url);
@@ -32,6 +32,10 @@ import javax.sql.DataSource;
             return ds;
         }
 
+        /*
+        * Configuração do HikariCP
+        * https://github.com/brettwooldridge/HikariCP
+        * */
         @Bean
         public DataSource hikariDataSource() {
             HikariConfig config = new HikariConfig();
